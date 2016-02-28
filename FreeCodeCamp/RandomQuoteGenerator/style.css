@@ -1,0 +1,65 @@
+body {
+    background: lightslategrey;
+    font-family: sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+#mainContainer {
+    background: bisque;
+    margin: 0 auto;
+    width: 40%;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.buttons {
+    height: 38px;
+    margin: auto;
+}
+
+.button {
+    height:35px;
+    border:none;
+    border-radius:3px;
+    color:#fff;
+    background-color:#333;
+    outline:none;
+    font-size:0.85em;
+    opacity:1;
+    cursor:pointer;
+    margin-left: 5px;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.rowContainer {
+    width: 100%;
+    display: block;
+}
+
+#newQuote {
+    float: right;
+    font-size: 1em;
+    height: 35px;
+}
+
+#tweetQuote {
+    float: right;
+    height: 35px;
+    font-size: 1em;
+}
+
+#randomQuote {
+    text-align: center;
+    font-size: 2em;
+}
+
+.author {
+    text-align: right;
+    font-size: 1.2em;
+}
