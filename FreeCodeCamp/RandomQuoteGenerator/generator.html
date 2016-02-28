@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Random Quote Generator</title>
+        <title>Random Movie Quote Generator</title>
         <link rel="stylesheet" type="text/css" href="style.css" />
+        <script src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
+        <script src="generator.js"></script>
+            
     </head>
     <body>
-        <h1>Random Quote Generator</h1>
+        <h1>Random Movie Quote Generator</h1>
         <div id="mainContainer">
-            <div class="rowContainer">
-                <p id="randomQuote">A random quote</p>
-            </div>
-            <div class="rowContainer author">
-                <i> - </i><i id="authorName">me</i>
-            </div>
             <div class="rowContainer">
                 <div class="buttons">
                     <button class="button" id="newQuote" title="Get A New Quote">New Quote</button>
                     <button class="button" id="tweetQuote" title="Tweet this quote">Tweet</button>
                 </div>
+            </div>
+            <div class="rowContainer quote">
+                <p id="randomQuote"></p>
+            </div>
+            <div class="rowContainer author">
+                <i> - </i><i id="authorName"></i>
             </div>
         </div>
     </body>

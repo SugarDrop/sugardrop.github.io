@@ -1,27 +1,29 @@
 body {
-    background: lightslategrey;
+    background-color: #333;
     font-family: sans-serif;
 }
 
 h1 {
     text-align: center;
+    color: #fff;
 }
 
 #mainContainer {
     background: bisque;
     margin: 0 auto;
-    width: 40%;
+    width: 45%;
     border-radius: 20px;
-    padding: 10px;
+    padding: 30px;
 }
 
 .buttons {
     height: 38px;
     margin: auto;
+    margin-top: 10px;
 }
 
 .button {
-    height:35px;
+    height:40px;
     border:none;
     border-radius:3px;
     color:#fff;
@@ -44,14 +46,14 @@ button:hover {
 
 #newQuote {
     float: right;
-    font-size: 1em;
-    height: 35px;
+    font-size: 1.2em;
+    height: 40px;
 }
 
 #tweetQuote {
     float: right;
-    height: 35px;
-    font-size: 1em;
+    height: 40px;
+    font-size: 1.2em;
 }
 
 #randomQuote {
@@ -59,7 +61,12 @@ button:hover {
     font-size: 2em;
 }
 
+.quote {
+    opacity: 0;
+}
+
 .author {
     text-align: right;
     font-size: 1.2em;
+    opacity: 0;
 }
