@@ -1,0 +1,43 @@
+body {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#infoContainer {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    opacity: 0.85;
+    border-radius: 20px;
+    width: 40%;
+    border-style: solid;
+    border-width: 3px;
+    position: absolute;
+    left: 30%;
+    top: 30%;
+    border-color: black;
+    color: white;
+}
+
+#locationName {
+    font-size: 40px;
+    font-weight: bold;
+    
+    display: inline-block;
+}
+
+.inlineContent {
+    display: inline;
+}
+
+#temperature {
+    font-size: 20px;
+}
+
+#measure {
+    font-size: 15px;
+    margin-left: 3px;
+    color: blue;
+    text-decoration: underline;
+}
