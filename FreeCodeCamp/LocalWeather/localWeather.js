@@ -73,10 +73,11 @@
                 var reqUrl = "http://api.openweathermap.org/data/2.5/weather?lat=" + position.coords.latitude + 
                              "&lon=" + position.coords.longitude + "&appid=eaa02b74bef7e1112f7ba1f04aa802f3";
                 $.ajax({
-                    //url: "http://api.openweathermap.org/data/2.5/weather?q=Kawai&appid=eaa02b74bef7e1112f7ba1f04aa802f3",
                     url: reqUrl,
                     success: function(response) {
                         updateRenderedWeatherInfo(response);
+                        $('#loading').css("display", "none");
+                        $('#infoContainer').css("display", "block");
                     }
                 });
             });
