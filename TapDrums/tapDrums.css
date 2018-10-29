@@ -1,0 +1,51 @@
+html {
+    font-size: 10px;
+    background-color: black;
+    background: url('http://3.bp.blogspot.com/-gwTYwIdCR9I/VzEwYs0PW2I/AAAAAAAABAM/8PbKxWRQEwEVOhQ_XckKVVgylql33quWgCHM/s1600/drum-set-desktop-wallpaper-1920x1080.jpg') bottom center;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.keys {
+    display: flex;
+    flex: 1;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.key {
+    border: .4rem solid whitesmoke;
+    border-radius: 5rem;
+    margin: 1rem;
+    font-size: 1.7rem;
+    padding: 1rem .5rem;
+    transition: all .2s ease;
+    width: 10rem;
+    text-align: center;
+    color: white;
+    background: rgba(0,0,0,0.4);
+    text-shadow: 0 0 .5rem black;
+}
+
+.playingVisualEffect {
+    transform: scale(1.1);
+    border-color: green;
+    box-shadow: 0 0 1rem greenyellow;
+    color: green;
+}
+
+kbd {
+    display: block;
+    font-size: 4.2rem;
+}
+
+.sound {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+}

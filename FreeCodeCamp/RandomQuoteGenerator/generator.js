@@ -4,7 +4,7 @@
         var author = $('.author');
         var randomQuote = $('#randomQuote');
         var authorName = $('#authorName');
-        
+
         var tweetQuote = function tweetQuote() {
             window.open(
                 'https://twitter.com/intent/tweet?hashtags=sugardrop&related=sugardrop&text=' + encodeURIComponent(randomQuote.text()),
@@ -27,7 +27,13 @@
                 },
                 url: "https://andruxnet-random-famous-quotes.p.mashape.com/?cat=movies",
                 success: function (response) {
-                    var data = JSON.parse(response);
+                    var data = null;
+                    try {
+                        data = JSON.parse(response);
+                    }
+                    catch (e) {
+                        data = response
+                    }
                     randomQuote.text(data["quote"]);
                     authorName.text(data["author"]);
                     quote.animate({
