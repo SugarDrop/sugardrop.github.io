@@ -1,0 +1,91 @@
+html {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 200;
+}
+
+body {
+    margin: 0;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+.panels {
+    min-height: 100vh;
+    overflow: hidden;
+
+    /* child content to lay out horizontally */
+    display: flex;
+}
+
+.panel {
+    /* background: #6B0F9C; */
+    box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.1);
+    color: white;
+    text-align: center;
+    /* Safari transitionend event.propertyName === flex */
+    /* Chrome + FF transitionend event.propertyName === flex-grow */
+    transition:
+        font-size 0.5s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+        flex 0.5s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+        background 0.2s;
+    font-size: 20px;
+    background-size: cover;
+    background-position: center;
+
+    /* Evenly distribute width */
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.panel1 {
+    background-image: url(https://i.pinimg.com/originals/50/87/bb/5087bbd81d3a8397be48f2f763139046.jpg);
+}
+.panel2 {
+    background-image: url(https://i.ytimg.com/vi/QBC-IlTmA00/maxresdefault.jpg);
+}
+.panel3 {
+    background-image: url(https://blog.mystart.com/wp-content/uploads/shutterstock_146078894-e1527788024681.jpg);
+}
+.panel4 {
+    background-image: url(https://i.pinimg.com/originals/bc/c0/ca/bcc0ca1cec9c4368157d54bc584a6e09.jpg);
+}
+.panel5 {
+    background-image: url(https://i.pinimg.com/originals/ad/dc/59/addc59e73f16a2fd0ed6c8a387af5c4f.jpg);
+}
+
+/* Flex Items within panel */
+.panel > * {
+    /* border: 1px solid red; */
+    margin: 0;
+    width: 100%;
+    transition: transform 0.3s;
+    flex: 1 0 auto;
+    display: flex;
+    justify-content: center; /* center horizontally within current column */
+    align-items: center; /* center vertially within current column */
+}
+.panel p {
+    text-transform: uppercase;
+    font-family: 'Amatic SC', cursive;
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
+    font-size: 2em;
+}
+.panel p:nth-child(2) { font-size: 4em; }
+.panel *:first-child { transform: translateY(-100%); }
+.panel.open-active *:first-child { transform: translateY(0); }
+.panel *:last-child { transform: translateY(100%); }
+.panel.open-active *:last-child { transform: translateY(0); }
+
+.panel.open {
+    /* Take 5 parts of the flex */
+    flex: 5;
+    font-size: 40px;
+}
