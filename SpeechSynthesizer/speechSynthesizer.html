@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Speech Synthesizer</title>
+        <style>
+            html {
+                background-color: black;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 10px;
+                box-sizing: border-box;
+            }
+            *, *:before, *::after {
+                box-sizing: inherit;
+            }
+
+            body {
+                margin: 0;
+                padding: 0;
+                min-height: 100vh;
+                display: flex;
+                align-items: center;
+            }
+
+            .main-container {
+                margin: 0 auto;
+                padding: 2rem;
+                background-color: lightsteelblue;
+                border-radius: 1rem;
+                max-width: 600px;
+                overflow: hidden;
+                position: relative;
+            }
+
+            h1 {
+                width: calc(100% + 4rem);
+                margin: -2rem 0 2rem -2rem;
+                padding: .5rem;
+                text-align: center;
+                background: #FFC600;
+                border-bottom: 5px solid #F3C010;
+                font-size: 5rem;
+                text-shadow: 3px 3px 0 #F3C010;
+            }
+
+            .main-container input,
+            .main-container button,
+            .main-container select,
+            .main-container textarea {
+                width: 100%;
+                display: block;
+                margin: 10px 0;
+                padding: 10px;
+                border: 0;
+                outline: 0;
+            }
+
+            .main-container textarea{
+                height: 10rem;
+            }
+
+            .main-container button {
+                background:#ffc600;
+                border: 0;
+                width: 49%;
+                float: left;
+                font-size: 2rem;
+                border-bottom: 5px solid #F3C010;
+                margin: 2px;
+                cursor: pointer;
+                position: relative;
+            }
+
+            /* #voices {
+                display: block;
+                width: 95%;
+                margin: 0px auto;
+                padding: 10px;
+                background: rgba(0,0,0,0.2)
+            } */
+        </style>
+    </head>
+    <body>
+        <div class="main-container">
+            <h1>Speech Synthesis</h1>
+            <select name="voices" id="voices">
+                <option value="">Select A Voice...</option>
+            </select>
+
+            <label for="rate">Rate: </label>
+            <input type="range" name="rate" min="0" max="2" value="1" step="0.1">
+            <label for="pitch">Pitch: </label>
+            <input type="range" name="pitch" min="0" max="2" step="0.1">
+
+            <textarea name="text">Welcome to speech synthesizer</textarea>
+            <button id="stop">Stop</button>
+            <button id="speak">Synthesize</button>
+        </div>
+        <script type="text/javascript" src="speechSynthesizer.js"></script>
+    </body>
+</html>
